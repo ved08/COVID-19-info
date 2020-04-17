@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>COVID-19 Status</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="container main">
+        <div class="row justify-content-center" >
+            <div class="col col-sm-2">
+                <input type="number" class="form-control" min="1" max="31" placeholder="Enter Date" id="dateBox">
+            </div>
+            <div class="col col-sm-2">
+                <select id="months" class="form-control">
+                        <option value="None">--Select--</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+            </div>
+            
+        </div>
+        <button type="button" class="btn btn-outline-secondary" onclick="submit()">Search Results</button>
+    </section>
+    <table class="table table-bordered table-hover" id="table">
+        <thead class="table-dark">
+            <tr>
+                <th>Category</th>
+                    <th>No. of cases</th>
+            </tr>
+        </thead>
+        <tbody class="bg-light">
+            <tr>
+                <th>Confirmed on this day</th>
+                <td id="dailyconfirmed"></td>
+            </tr>
+            <tr>
+                <th>Deaths on this day</th>
+                <td id="dailydeceased"></td>
+            </tr>
+            <tr>
+                <th>Recovered on this day</th>
+                <td id="dailyrecovered"></td>
+            </tr>
+            <tr>
+                <th>Total confirmed cases till this day</th>
+                <td id="totalconfirmed"></td>
+            </tr>
+            <tr>
+                <th>Total Deaths till this day</th>
+                <td id="totaldeceased"></td>
+            </tr>
+            <tr>
+                <th>Total recovered till this day</th>
+                <td id="totalrecovered"></td>
+            </tr>
+        </tbody>
+    </table>
+    <small class="">*Today 's Information will be updated by the end of the day</small>
+    <script src="script.js"></script>
+</body>
+</html>

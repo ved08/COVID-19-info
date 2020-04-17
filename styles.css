@@ -1,0 +1,13 @@
+body{
+    background-color: #69D0CC
+}
+.main{
+    margin: 15px;
+    text-align: center;
+}
+.input{
+    width: 8em;
+}
+button{
+    margin:10px;
+}
