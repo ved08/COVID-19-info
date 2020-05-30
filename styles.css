@@ -1,5 +1,6 @@
-body{
-    background-color: #69D0CC
+body {
+    font-family: 'Comfortaa', cursive;
+    background-color: #f5f5f5;
 }
 .main{
     margin: 15px;
@@ -8,6 +9,68 @@ body{
 .input{
     width: 8em;
 }
+#filter-table {
+    margin-bottom: 30px;
+}
+#input {
+    margin-top: 50px;
+}
 button{
     margin:10px;
+}
+table {
+    margin-bottom: 20px;
+    -webkit-box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.9);
+    -moz-box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.9);
+    box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.9);
+}
+.container-main {
+    text-align: center;
+}
+/* End Of main code */
+
+#global-stats, #india-stats {
+    align-content: center
+}
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    -webkit-box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.9);
+    -moz-box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.9);
+    box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.9);
+}
+.confirmed {
+    color: #F42E39;
+}
+.active {
+    color: #4C75F2;
+}
+.recovered {
+    color: #35A745;
+}
+.deaths {
+    color: #6C757D;
+}
+#confirmed, #recovered, #active, #deaths, #confirmedI, #recoveredI, #activeI, #deathsI {
+    font-size: 30px;
+}
+@media (max-width:600px){
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+hr {
+    margin-top: 45px;
+    border: 1px solid black;
+    opacity: 0.35;
 }
