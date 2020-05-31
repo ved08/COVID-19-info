@@ -1,103 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>COVID-19 Status</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>COVID-19 Status</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-</head>
-<body>
-    <section id="global-stats">
-        <h1 class="text-center">Global Overview</h1>
-        <section id="cards" class="flex-container">
-            <div class="confirmed card text-center"><p>Confirmed</p> <p id="confirmed"></p></div>
-            <div class="active card text-center"><p>Active</p> <p id="active"></p></div>
-            <div class="recovered card text-center"><p>Recovered</p> <p id="recovered"></p><div id="recovery-rate"></div></div>
-            <div class="deaths card text-center"><p>Deceased</p> <p id="deaths"></p><div id="death-rate"></div></div>
-        </section>
-    </section>
-            <hr>
-            <!-- Start of main -->
-    <section class="container main">
-        <section id="india-stats">
-            <h1 class="text-center">India 's Overview</h1>
+    </head>
+    <body>
+        <section id="global-stats">
+            <h1 class="text-center">Global Overview</h1>
             <section id="cards" class="flex-container">
-                <div class="confirmed card text-center"><p>Confirmed</p> <p id="confirmedI"></p></div>
-                <div class="active card text-center"><p>Active</p> <p id="activeI"></p></div>
-                <div class="recovered card text-center"><p>Recovered</p> <p id="recoveredI"></p><div id="recovery-rateI"></div></div>
-                <div class="deaths card text-center"><p>Deceased</p> <p id="deathsI"></p><div id="death-rateI"></div></div>
+                <div class="confirmed card text-center"><p>Confirmed</p> <p id="confirmed"></p></div>
+                <div class="active card text-center"><p>Active</p> <p id="active"></p></div>
+                <div class="recovered card text-center"><p>Recovered</p> <p id="recovered"></p><div id="recovery-rate"></div></div>
+                <div class="deaths card text-center"><p>Deceased</p> <p id="deaths"></p><div id="death-rate"></div></div>
             </section>
+            <div class="flex-container">
+                <a id="filter" href="./filter/countries.html">Filter By Countries</a>
+            </div>    
         </section>
-        <section id="input">
-            <h1 id="filter-table">Filter By Date</h1>
-        <div class="row justify-content-center" >
-        <div class="col col-sm-2">
-            <input type="number" class="form-control" min="1" max="31" placeholder="Enter Date" id="dateBox">
-        </div>
-        <div class="col col-sm-2">
-            <select id="months" class="form-control">
-                <option value="None">--Month--</option>
-                <option value="January">January</option>
-                <option value="February">February</option>
-                <option value="March">March</option>
-                <option value="April">April</option>
-                <option value="May">May</option>
-                <option value="June">June</option>
-                <option value="July">July</option>
-                <option value="August">August</option>
-                <option value="September">September</option>
-                <option value="October">October</option>
-                <option value="November">November</option>
-                <option value="December">December</option>
-            </select>
-        </div>
-            
-        </div>
-        <button type="button" class="btn btn-outline-secondary" onclick="submit()">Search Results</button>
-    </section>
-    </section>
-    <small><strong>*The table shows slightly different values because the data in the table updates on daily basis</strong></small>
-    <table class="table table-bordered table-hover" id="table">
-        <thead class="table-dark">
-            <tr>
-                <th>Category</th>
-                    <th>No. of cases</th>
-            </tr>
-        </thead>
-        <tbody class="bg-light">
-            <tr>
-                <th>Confirmed on this day</th>
-                <td id="dailyconfirmed">0</td>
-            </tr>
-            <tr>
-                <th>Deaths on this day</th>
-                <td id="dailydeceased">0</td>
-            </tr>
-            <tr>
-                <th>Recovered on this day</th>
-                <td id="dailyrecovered">0</td>
-            </tr>
-            <tr>
-                <th>Total confirmed cases till this day</th>
-                <td id="totalconfirmed">0</td>
-            </tr>
-            <tr>
-                <th>Total Deaths till this day</th>
-                <td id="totaldeceased">0</td>
-            </tr>
-            <tr>
-                <th>Total recovered till this day</th>
-                <td id="totalrecovered">0</td>
-            </tr>
-        </tbody>
-    </table>
-    <hr>
- 
-    <script src="script.js"></script>
-</body>
+                <hr>
+                <!-- Start of main -->
+        <section class="container main">
+            <section id="india-stats">
+                <h1 class="text-center">India 's Overview</h1>
+                <section id="cards" class="flex-container">
+                    <div class="confirmed card text-center"><p>Confirmed</p> <p id="confirmedI"></p></div>
+                    <div class="active card text-center"><p>Active</p> <p id="activeI"></p></div>
+                    <div class="recovered card text-center"><p>Recovered</p> <p id="recoveredI"></p><div id="recovery-rateI"></div></div>
+                    <div class="deaths card text-center"><p>Deceased</p> <p id="deathsI"></p><div id="death-rateI"></div></div>
+                </section>
+            </section>
+            <section id="input">
+                <h1 id="filter-table">Filter By Date</h1>
+            <div class="row justify-content-center" >
+            <div class="col col-sm-2">
+                <input type="number" class="form-control" min="1" max="31" placeholder="Enter Date" id="dateBox">
+            </div>
+            <div class="col col-sm-2">
+                <select id="months" class="form-control">
+                    <option value="None">--Month--</option>
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select>
+            </div>
+                
+            </div>
+            <button type="button" class="btn btn-outline-secondary" onclick="submit()">Search Results</button>
+        </section>
+        </section>
+        <h5><strong>*To view today's updates you can check by end of the day</strong></h5>
+        <table class="table table-bordered table-hover" id="table">
+            <thead class="table-dark">
+                <tr>
+                    <th>Category</th>
+                        <th>No. of cases</th>
+                </tr>
+            </thead>
+            <tbody class="bg-light">
+                <tr>
+                    <th>Confirmed on this day</th>
+                    <td id="dailyconfirmed">0</td>
+                </tr>
+                <tr>
+                    <th>Deaths on this day</th>
+                    <td id="dailydeceased">0</td>
+                </tr>
+                <tr>
+                    <th>Recovered on this day</th>
+                    <td id="dailyrecovered">0</td>
+                </tr>
+                <tr>
+                    <th>Total confirmed cases till this day</th>
+                    <td id="totalconfirmed">0</td>
+                </tr>
+                <tr>
+                    <th>Total Deaths till this day</th>
+                    <td id="totaldeceased">0</td>
+                </tr>
+                <tr>
+                    <th>Total recovered till this day</th>
+                    <td id="totalrecovered">0</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+    
+        <script src="script.js"></script>
+    </body>
 </html>

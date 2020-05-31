@@ -18,19 +18,22 @@ function submit(){
  // used Fetch API to render the data
     fetch('https://api.covid19india.org/data.json')
 	.then(response => response.json())
-	.then(({ cases_time_series: cases }) =>
-            cases.find(
+	.then(({ cases_time_series: cases }) =>{     
+        cases.find(
             x => {
             if(x.date === enteredValue + ' '){ //here x is the data.json
-    //               date = x.date;
                         document.getElementById('dailyconfirmed').textContent = x.dailyconfirmed;
                         document.getElementById('dailydeceased').textContent = x.dailydeceased;  
                         document.getElementById('dailyrecovered').textContent = x.dailyrecovered;
-                        document.getElementById('totalconfirmed').textContent = x.totalconfirmed;      
-                        document.getElementById('totaldeceased').textContent = x.totaldeceased;
-                        document.getElementById('totalrecovered').textContent = x.totalrecovered;    
-                }
+
+                        $.getJSON('https://covid19.mathdro.id/api/countries/india', (data) => {
+                        document.getElementById('totalconfirmed').textContent = data.confirmed.value;      
+                        document.getElementById('totaldeceased').textContent = data.deaths.value;
+                        document.getElementById('totalrecovered').textContent = data.recovered.value;
+                        })
+                    }
             })
+        }
         )
 }
 // End of Main Code

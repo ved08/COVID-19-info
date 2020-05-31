@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search By Countries</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+    <a href="../index.html" class="btn bg-danger">Go Back</a>
+    </nav>
+    <section class="main">
+        <input type="text" id="input-country" placeholder="Enter Country Name">
+        <button class="btn btn-warning" onclick="renderData()">Enter</button>
+        <section id="cards" class="flex-container">
+                <div class="confirmed card text-center"><p>Confirmed</p> <p id="confirmed"></p></div>
+                <div class="active card text-center"><p>Active</p> <p id="active"></p></div>
+                <div class="recovered card text-center"><p>Recovered</p> <p id="recovered"></p><div id="recovery-rate"></div></div>
+                <div class="deaths card text-center"><p>Deceased</p> <p id="deaths"></p><div id="death-rate"></div></div>
+        </section>
+
+    </section>
+</body>
+</html>

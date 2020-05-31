@@ -27,6 +27,13 @@ table {
 .container-main {
     text-align: center;
 }
+#filter {
+    margin-top: 35px;
+    padding: 7px;
+    border: 2px solid #868A8D;
+    color: #858a8d;
+    text-decoration: none;
+}
 /* End Of main code */
 
 #global-stats, #india-stats {
