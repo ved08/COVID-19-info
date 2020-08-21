@@ -1,1 +1,4 @@
 View the website here https://vedvardhan.github.io/COVID-19-info
+
+### Contributions
+Feel free to open a issue or pull request.
