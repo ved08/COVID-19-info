@@ -26,11 +26,11 @@ function submit(){
                         document.getElementById('dailydeceased').textContent = x.dailydeceased;  
                         document.getElementById('dailyrecovered').textContent = x.dailyrecovered;
 
-                        $.getJSON('https://covid19.mathdro.id/api/countries/india', (data) => {
-                        document.getElementById('totalconfirmed').textContent = data.confirmed.value;      
-                        document.getElementById('totaldeceased').textContent = data.deaths.value;
-                        document.getElementById('totalrecovered').textContent = data.recovered.value;
-                        })
+                        // $.getJSON('https://covid19.mathdro.id/api/countries/india', (data) => {
+                        document.getElementById('totalconfirmed').textContent = x.totalconfirmed;     
+                        document.getElementById('totaldeceased').textContent = x.totaldeceased;
+                        document.getElementById('totalrecovered').textContent = x.totalrecovered;
+                        // })
                     }
             })
         }

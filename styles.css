@@ -2,6 +2,9 @@ body {
     font-family: 'Comfortaa', cursive;
     background-color: #f5f5f5;
 }
+h1:hover {
+    cursor: pointer;
+}
 .h1 {
     border-bottom: 2px solid #858a8d;
     margin-bottom: 50px;
@@ -23,20 +26,18 @@ button{
     margin:10px;
 }
 table {
+    width: 60%;
     margin-bottom: 20px;
     -webkit-box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.9);
     -moz-box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.9);
     box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.9);
 }
 .container-main {
+    width: 100%;
     text-align: center;
 }
 #filter {
-    margin-top: 35px;
-    padding: 7px;
-    border: 2px solid #868A8D;
-    color: #858a8d;
-    text-decoration: none;
+    margin-top: 30px;
 }
 /* End Of main code */
 
@@ -57,6 +58,9 @@ table {
     -webkit-box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.9);
     -moz-box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.9);
     box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.9);
+}
+.card:hover {
+    cursor: pointer;
 }
 .confirmed {
     color: #F42E39;

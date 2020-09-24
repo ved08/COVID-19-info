@@ -1,10 +1,5 @@
 function renderData() {
     let country = $('#input-country')[0].value.toLowerCase();
-    let url = 'https://covid19.mathdro.id/api/countries/'.concat(country)
-    // $.getJSON(url, (data) => {
-    //     if()
-    //     $('#confirmed').html(data.confirmed.value);
-    // })
     $.ajax({
         type: 'GET',
         url: 'https://covid19.mathdro.id/api/countries/'.concat(country),
@@ -25,7 +20,7 @@ function renderData() {
             $('#active').html('Error 400');
             $('#recovered').html('Error 400');
             $('#deaths').html('Error 400');
-            alert("oops an error occured check country's spelling or your internet connection maybe weak");            
+            alert("Please check the country spelling");            
             $('#input-country')[0].value = '';
             $('#input-country')[0].placeholder = 'Try Again';
         }
